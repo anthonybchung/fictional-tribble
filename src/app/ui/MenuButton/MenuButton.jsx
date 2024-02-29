@@ -2,13 +2,13 @@ import React from 'react'
 import Hamburger from './hamburger'
 import Cross from './cross'
 
-const MenuButton = ({closed=true}) => {
+const MenuButton = ({closed=true, handleClick}) => {
 
   const displayIcon = ()=>{
     return closed ? <Hamburger/>:<Cross/>
   }
   return (
-    <button>
+    <button onClick={handleClick}>
       {displayIcon()}
     </button>
   )
