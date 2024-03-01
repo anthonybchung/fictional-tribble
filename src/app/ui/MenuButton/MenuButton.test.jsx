@@ -20,7 +20,6 @@ describe('MenuButton',()=>{
 
   it('should not display a hamburder-icon when closed prop is false',()=>{
     render(<MenuButton closed={false}/>)
-    screen.debug()
     const hamburgerIcon = screen.queryByTitle('Hamburger')
     expect(hamburgerIcon).not.toBeInTheDocument()
     const crossIcon = screen.queryByTitle('Cross')
