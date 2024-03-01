@@ -14,4 +14,4 @@
 
 - height is 100% when state is false(opened)
 - height is 0px, padding is 0px when state is true(closed)
-- body can not scroll when menu is not closed.
+- should receive a prop array(element {name,link}) for list-items.

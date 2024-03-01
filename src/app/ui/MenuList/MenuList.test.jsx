@@ -4,6 +4,21 @@ import {render, screen} from '@testing-library/react'
 import MenuList from './MenuList'
 
 describe('MenuList component',()=>{
+  const listItems=[
+    {
+      name: "Projects",
+      link: "/projects"
+    },
+    {
+      name: "Hobbies",
+      link: "/hobbies",
+    },
+    {
+      name: "Contact Me",
+      link: "/contact_me"
+    }
+  ]
+
   it('should render MenuList component',()=>{
     render(<MenuList/>)
   })
@@ -20,7 +35,9 @@ describe('MenuList component',()=>{
     expect(ulElement).toHaveClass('pt-0 h-0')
   })
 
-  it.todo('should disable body-scroll when false is passed')
-
-  it.todo('should enable body-scroll when true is passed')
+  it('should list prop:array',()=>{
+    render(<MenuList closed={false} listItems={listItems}/>)
+    const liElements = screen.getAllByRole('listitem')
+    expect(liElements.length).toBe(3)
+  })
 })
