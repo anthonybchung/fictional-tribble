@@ -6,7 +6,7 @@ const MenuList = ({closed, listItems=[]}) => {
 
   const displayListItems = listItems.map((item)=>{
       return (
-        <li className='my-4'>
+        <li className='my-4' key={item.name}>
           <Link href={item.link}>{item.name}</Link>
         </li>
       )
