@@ -23,3 +23,6 @@
 - it should pass a handler to MenuButton to change the state when clicked.
 - it should also pass the state to MenuList.
 - it should accept a prop:string for Company Name.
+
+### Post building with BDD.
+![Screenshot 2024-03-04 at 7 39 31 am](https://github.com/anthonybchung/fictional-tribble/assets/99620815/f240fff6-8535-4260-9d31-42aa5a850af2)
