@@ -8,7 +8,7 @@ const MenuButton = ({closed=true, handleClick}) => {
     return closed ? <Hamburger/>:<Cross/>
   }
   return (
-    <button onClick={handleClick}>
+    <button className='md:hidden' onClick={handleClick}>
       {displayIcon()}
     </button>
   )

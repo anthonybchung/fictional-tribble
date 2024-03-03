@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   const companyName = 'ABCHUNG'
   return (
     <html lang="en">
-      <body>
+      <body className='md:overflow-auto'>
         <Navbar listItems={listItems} companyName={companyName}/>
         {children}
       </body>
