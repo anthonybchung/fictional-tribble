@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "./ui/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,9 +10,28 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const listItems=[
+    {
+      name: "Projects",
+      link: "/projects"
+    },
+    {
+      name: "Hobbies",
+      link: "/hobbies",
+    },
+    {
+      name: "Contact Me",
+      link: "/contact_me"
+    }
+  ]
+
+  const companyName = 'ABCHUNG'
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Navbar listItems={listItems} companyName={companyName}/>
+        {children}
+      </body>
     </html>
   );
 }

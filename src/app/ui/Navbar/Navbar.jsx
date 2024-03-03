@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import MenuList from '../MenuList/MenuList'
 import MenuButton from '../MenuButton/MenuButton'
@@ -11,7 +13,7 @@ const Navbar = ({listItems, companyName}) => {
   }
 
   return (
-    <nav>
+    <nav className='h-12 w-screen px-6 bg-primary text-quaternary flex flex-row items-center justify-between'>
       <h1>{companyName}</h1>
       <MenuList listItems={listItems} closed={closed}/>
       <MenuButton closed={closed} handleClick={handleClose}/>
